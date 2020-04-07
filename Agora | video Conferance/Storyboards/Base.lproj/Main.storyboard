@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="35j-SI-fmQ">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="CCV-Od-kRS">
+            <objects>
+                <viewController id="35j-SI-fmQ" customClass="MainViewController" customModule="Agora___video_Conferance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UaL-s5-Aca">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video-icon" translatesAutoresizingMaskIntoConstraints="NO" id="GB9-xs-arR">
+                                <rect key="frame" x="67.5" y="120" width="240" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Okk-Qu-q1n"/>
+                                    <constraint firstAttribute="width" constant="240" id="gN9-NF-3Cp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One-To-One Video Chat" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQZ-cC-pbG">
+                                <rect key="frame" x="32" y="280" width="311" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="textColor" red="0.99990183119999998" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7B9-PW-EIh">
+                                <rect key="frame" x="117.5" y="591" width="140" height="36"/>
+                                <color key="backgroundColor" red="0.99990183119999998" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="hNJ-0k-a4y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Join Channel">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="joinIsPressed:" destination="35j-SI-fmQ" eventType="touchUpInside" id="p5P-DK-ylE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GB9-xs-arR" firstAttribute="top" secondItem="FtD-mx-9Id" secondAttribute="top" constant="120" id="5nx-yy-H8x"/>
+                            <constraint firstItem="7B9-PW-EIh" firstAttribute="centerX" secondItem="FtD-mx-9Id" secondAttribute="centerX" id="5zJ-7o-epQ"/>
+                            <constraint firstItem="uQZ-cC-pbG" firstAttribute="centerX" secondItem="FtD-mx-9Id" secondAttribute="centerX" id="Fs7-hd-VAn"/>
+                            <constraint firstItem="uQZ-cC-pbG" firstAttribute="top" secondItem="GB9-xs-arR" secondAttribute="bottom" constant="30" id="Iws-3d-VrG"/>
+                            <constraint firstItem="FtD-mx-9Id" firstAttribute="bottom" secondItem="7B9-PW-EIh" secondAttribute="bottom" constant="40" id="Qcj-R3-FhI"/>
+                            <constraint firstItem="uQZ-cC-pbG" firstAttribute="leading" secondItem="FtD-mx-9Id" secondAttribute="leading" constant="32" id="cBQ-Vn-04Z"/>
+                            <constraint firstItem="FtD-mx-9Id" firstAttribute="trailing" secondItem="uQZ-cC-pbG" secondAttribute="trailing" constant="32" id="p3b-Oj-0vZ"/>
+                            <constraint firstItem="GB9-xs-arR" firstAttribute="centerX" secondItem="FtD-mx-9Id" secondAttribute="centerX" id="xgD-Mq-sYf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FtD-mx-9Id"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6G-QD-GmT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-898" y="99"/>
+        </scene>
+        <!--Call View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="CallVC" id="BYZ-38-t0r" customClass="CallViewController" customModule="Agora___video_Conferance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maw-hi-wFz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hcc-G2-Buv">
+                                <rect key="frame" x="209" y="16" width="150" height="180"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="cCK-4G-Tpz"/>
+                                    <constraint firstAttribute="height" constant="180" id="lLn-CP-p6f"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="TB5-eH-nWs">
+                                <rect key="frame" x="102.5" y="592" width="170" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnF-ng-9Cq">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="C2h-xk-vIi"/>
+                                            <constraint firstAttribute="height" constant="40" id="lgA-Bd-ELN"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel Call" image="switch-icon">
+                                            <color key="titleColor" red="0.99990183119999998" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="swtichIsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8eF-V1-Du3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ei-Pb-lmR">
+                                        <rect key="frame" x="65" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="G4N-l4-Gqq"/>
+                                            <constraint firstAttribute="width" constant="40" id="fMJ-MZ-5rV"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel Call" image="cancel-icon">
+                                            <color key="titleColor" red="0.99990183119999998" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelIsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pJn-sL-4cs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkz-oM-Vs9">
+                                        <rect key="frame" x="130" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Jqe-zT-Us8"/>
+                                            <constraint firstAttribute="height" constant="40" id="oy9-JE-5Wu"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel Call" image="mute-icon">
+                                            <color key="titleColor" red="0.99990183119999998" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="muteIsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uLz-cR-FbV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="maw-hi-wFz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="284-b5-JXx"/>
+                            <constraint firstItem="Hcc-G2-Buv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="5b4-Xh-uhf"/>
+                            <constraint firstItem="TB5-eH-nWs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HAJ-iA-47Y"/>
+                            <constraint firstItem="maw-hi-wFz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IOS-V3-vjC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TB5-eH-nWs" secondAttribute="bottom" constant="35" id="Khn-ht-RSm"/>
+                            <constraint firstItem="maw-hi-wFz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Twh-8E-ezG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hcc-G2-Buv" secondAttribute="trailing" constant="16" id="Z7P-mY-w5Z"/>
+                            <constraint firstItem="maw-hi-wFz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="obf-wc-qae"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="localVideo" destination="Hcc-G2-Buv" id="SGH-0W-CP9"/>
+                        <outlet property="remoteVideo" destination="maw-hi-wFz" id="lf2-Cf-RFx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84" y="99.400299850074973"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cancel-icon" width="512" height="512"/>
+        <image name="mute-icon" width="512" height="512"/>
+        <image name="switch-icon" width="500" height="500"/>
+        <image name="video-icon" width="512" height="512"/>
+    </resources>
+</document>
